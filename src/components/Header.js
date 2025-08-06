@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import "./header.css";
 
 const Header = () => {
@@ -26,12 +27,12 @@ const Header = () => {
             ☰
           </button>
           <ul className={`nav-menu${navOpen ? " active" : ""}`}>
-            <li className="nav-item"><a href="#" className="nav-link active">Accueil</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Jeux</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Résultats</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Statistiques</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Mon Compte</a></li>
-            <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
+            <li className="nav-item"><Link to="/" className="nav-link" activeClassName="active">Accueil</Link></li>
+            <li className="nav-item"><Link to="/jeux" className="nav-link" activeClassName="active">Jeux</Link></li>
+            <li className="nav-item"><Link to="/resultats" className="nav-link" activeClassName="active">Résultats</Link></li>
+            <li className="nav-item"><Link to="/statistiques" className="nav-link" activeClassName="active">Statistiques</Link></li>
+            <li className="nav-item"><Link to="/mon-compte" className="nav-link" activeClassName="active">Mon Compte</Link></li>
+            <li className="nav-item"><Link to="/contact" className="nav-link" activeClassName="active">Contact</Link></li>
           </ul>
         </nav>
       </div>
