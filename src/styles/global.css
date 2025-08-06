@@ -1,0 +1,573 @@
+/* Colle ici tout le CSS fourni de ton template HTML */        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 80px;
+        }
+
+        /* Logo dans le header */
+        .header-logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-balls {
+            display: flex;
+            margin-right: 15px;
+        }
+
+        .header-ball {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 2px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .header-ball:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .header-ball-blue { background: linear-gradient(45deg, #1e3c72 0%, #2a5298 100%); }
+        .header-ball-green { background: linear-gradient(45deg, #56ab2f 0%, #a8e6cf 100%); }
+        .header-ball-purple { background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); }
+        .header-ball-red { background: linear-gradient(45deg, #c94b4b 0%, #ff6b6b 100%); }
+
+        .header-text {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1e3c72;
+        }
+
+        /* Section Hero avec le grand logo */
+        .hero-section {
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container {
+            position: relative;
+        }
+
+        .lottery-balls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ball {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 -5px;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: 3px solid white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ball-blue { background: linear-gradient(45deg, #1e3c72 0%, #2a5298 100%); }
+        .ball-green { background: linear-gradient(45deg, #56ab2f 0%, #a8e6cf 100%); }
+        .ball-red { background: linear-gradient(45deg, #c94b4b 0%, #ff6b6b 100%); }
+        .ball-purple { background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); }
+
+        .ball {
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .main-text {
+            background: linear-gradient(45deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 50px;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: lowercase;
+            letter-spacing: -2px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            border: 4px solid white;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .sparkle {
+            position: absolute;
+            color: #ffd700;
+            font-size: 24px;
+            animation: sparkle 2s infinite;
+            cursor: pointer;
+        }
+
+        .sparkle1 { top: -10px; left: 10%; animation-delay: 0s; }
+        .sparkle2 { top: 20px; right: 10%; animation-delay: 0.5s; }
+        .sparkle3 { bottom: -10px; left: 15%; animation-delay: 1s; }
+        .sparkle4 { bottom: 20px; right: 15%; animation-delay: 1.5s; }
+
+        .clover {
+            position: absolute;
+            font-size: 32px;
+            color: #56ab2f;
+            animation: float 3s ease-in-out infinite;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .clover-left {
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .clover-right {
+            right: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation-delay: 1.5s;
+        }
+
+        /* Menu mobile */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        /* Animations */
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+            50% { opacity: 0.3; transform: scale(1.2) rotate(180deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(-50%) rotate(0deg); }
+            50% { transform: translateY(-70%) rotate(10deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(255,215,0,0.5); }
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        /* Effets de survol */
+        .ball:hover {
+            animation: bounce 0.6s ease-in-out;
+            transform: scale(1.2);
+            z-index: 10;
+        }
+
+        .main-text:hover {
+            animation: pulse 1s infinite, rainbow 2s linear infinite;
+            transform: scale(1.1);
+        }
+
+        .clover:hover {
+            animation: shake 0.5s ease-in-out infinite;
+            transform: translateY(-50%) scale(1.5);
+        }
+
+        .sparkle:hover {
+            animation: sparkle 0.3s infinite;
+            transform: scale(2);
+        }
+
+        .logo-container:hover .sparkle {
+            animation-duration: 0.5s;
+        }
+
+        .logo-container:hover .ball {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3), 0 0 15px rgba(255,255,255,0.5);
+        }
+
+        .ball::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+
+        /* Responsive */
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ffd700;
+            padding-left: 10px;
+        }
+
+        .footer-section ul li a::before {
+            content: "🎯 ";
+            opacity: 0;
+            position: absolute;
+            left: -20px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section ul li a:hover::before {
+            opacity: 1;
+            left: -15px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .footer-logo-balls {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        .footer-logo-ball {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin: 0 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            animation: footerBallFloat 3s ease-in-out infinite;
+        }
+
+        .footer-logo-ball:nth-child(2) { animation-delay: 0.5s; }
+        .footer-logo-ball:nth-child(3) { animation-delay: 1s; }
+        .footer-logo-ball:nth-child(4) { animation-delay: 1.5s; }
+
+        .footer-logo-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .newsletter {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .newsletter-input:focus {
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 15px rgba(255,215,0,0.3);
+        }
+
+        .newsletter-btn {
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1e3c72;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @keyframes footerBallFloat {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.1); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .header-text {
+                font-size: 1.4rem;
+            }
+
+            .main-text {
+                font-size: 2.5rem;
+                padding: 20px 30px;
+            }
+
+            .ball {
+                width: 60px;
+                height: 60px;
+                font-size: 14px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }

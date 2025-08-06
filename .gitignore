@@ -1,0 +1,10 @@
+# Node
+node_modules/
+.cache/
+public/
+
+# dotenv environment variables file
+.env
+
+# Mac
+.DS_Store
