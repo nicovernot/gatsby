@@ -1,0 +1,11 @@
+,grille,score,validation,somme,pairs,range,consecutifs,diversite_unites,zones
+0,"[7, 12, 21, 35, 40]",90.05998775010745,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",115,2,33,0,5,2-1-2
+1,"[8, 12, 23, 35, 47]",89.46996649066304,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",125,2,39,0,5,2-1-2
+2,"[4, 11, 23, 35, 42]",87.81906819863391,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",115,2,38,0,5,2-1-2
+3,"[2, 11, 23, 38, 47]",87.48267122790303,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",121,2,45,0,5,2-1-2
+4,"[4, 17, 23, 35, 46]",87.24617491432033,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",125,2,42,0,5,2-1-2
+5,"[2, 17, 21, 35, 40]",86.96846797107038,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",115,2,38,0,5,2-1-2
+6,"[7, 8, 12, 23, 40]",86.88970827196532,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",90,3,33,1,5,3-1-1
+7,"[12, 21, 38, 40, 47]",86.86556133385815,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",158,3,35,0,5,1-1-3
+8,"[4, 7, 23, 38, 42]",86.69355268727207,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",114,3,38,0,5,2-1-2
+9,"[7, 10, 21, 23, 35]",86.6187051392534,"{'sum_ok': np.True_, 'balance_ok': True, 'zones_ok': True, 'not_too_consecutive': True, 'diversity_ok': True, 'range_ok': np.True_, 'quality_score': np.float64(1.0)}",96,1,28,0,5,2-2-1
